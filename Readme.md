@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
-* Студент: [Ольга Бачинина](https://up.htmlacademy.ru/htmlcss/39/user/816175).
-* Наставник: `Неизвестно`.
+* Студент: [Ольга Шашкова](https://up.htmlacademy.ru/htmlcss/39/user/816175).
+* Наставник: [Виктор Рыбаков](https://htmlacademy.ru/profile/viktor-rybakov).
+* Сайт: [лежит здесь](https://bachinina.github.io/sedona/).
 
 ---
 
