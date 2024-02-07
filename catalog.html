@@ -44,9 +44,11 @@
               <span class="nav__item-count">12</span>
             </a>
           </li>
+          <li class="nav__item">
+            <a class="nav__button button button--brown" href="#">Хочу сюда!</a>
+          </li>
         </ul>
 
-        <a class="nav__button button button--brown" href="#">Хочу сюда!</a>
       </nav>
     </header>
 
@@ -54,7 +56,7 @@
       <header class="inner__header">
         <h1 class="inner__main-title">Гостиницы Седоны</h1>
 
-        <ul class="inner__breadcrumbs breadcrumbs">
+        <ol class="inner__breadcrumbs breadcrumbs">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html">
               <span class="visually-hidden">Главная</span>
@@ -63,104 +65,113 @@
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link">Гостиницы</a>
           </li>
-        </ul>
+        </ol>
       </header>
 
       <!--  Фильтры -->
-      <form class="filter" action="https://echo.htmlacademy.ru" method="post" data-test="filter">
-        <fieldset class="filter__field">
-          <legend class="filter__legend">Инфраструктура:</legend>
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтры для подбора гостиниц</h2>
+        <form class="filter__form" action="https://echo.htmlacademy.ru" method="post" data-test="filter">
+          <fieldset class="filter__field">
+            <legend class="filter__legend">Инфраструктура:</legend>
 
-          <ul class="filter__list">
+            <ul class="filter__list">
 
-            <li class="filter__item">
-              <input class="filter__checkbox" type="checkbox" name="swimmingpool" id="filter-check-swimmingpool"
-                checked>
-              <label class="filter__label" for="filter-check-swimmingpool">Бассейн</label>
-            </li>
+              <li class="filter__item">
+                <input class="filter__checkbox" type="checkbox" name="swimmingpool" id="filter-check-swimmingpool"
+                  checked>
+                <label class="filter__label" for="filter-check-swimmingpool">Бассейн</label>
+              </li>
 
-            <li class="filter__item">
-              <input class="filter__checkbox" type="checkbox" name="parking" id="filter-check-parking" checked>
-              <label class="filter__label" for="filter-check-parking">Парковка</label>
-            </li>
+              <li class="filter__item">
+                <input class="filter__checkbox" type="checkbox" name="parking" id="filter-check-parking" checked>
+                <label class="filter__label" for="filter-check-parking">Парковка</label>
+              </li>
 
-            <li class="filter__item">
-              <input class="filter__checkbox" type="checkbox" name="wi-fi" id="filter-check-wi-fi">
-              <label class="filter__label" for="filter-check-wi-fi">Wi-Fi</label>
-            </li>
-          </ul>
-        </fieldset>
+              <li class="filter__item">
+                <input class="filter__checkbox" type="checkbox" name="wi-fi" id="filter-check-wi-fi">
+                <label class="filter__label" for="filter-check-wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <fieldset class="filter__field">
-          <legend class="filter__legend">Тип жилья:</legend>
+          <fieldset class="filter__field">
+            <legend class="filter__legend">Тип жилья:</legend>
 
-          <ul class="filter__list">
-            <li class="filter__item">
-              <input class="filter__radio" type="radio" name="type-of-housing" value="hotel" id="filter-radio-hotel"
-                checked>
-              <label class="filter__label" for="filter-radio-hotel">Гостиница</label>
-            </li>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <input class="filter__radio" type="radio" name="type-of-housing" value="hotel" id="filter-radio-hotel"
+                  checked>
+                <label class="filter__label" for="filter-radio-hotel">Гостиница</label>
+              </li>
 
-            <li class="filter__item">
-              <input class="filter__radio" type="radio" name="type-of-housing" value="motel" id="filter-radio-motel">
-              <label class="filter__label" for="filter-radio-motel">Мотель</label>
-            </li>
+              <li class="filter__item">
+                <input class="filter__radio" type="radio" name="type-of-housing" value="motel" id="filter-radio-motel">
+                <label class="filter__label" for="filter-radio-motel">Мотель</label>
+              </li>
 
-            <li class="filter__item">
-              <input class="filter__radio" type="radio" name="type-of-housing" value="apartments"
-                id="filter-radio-apartments">
-              <label class="filter__label" for="filter-radio-apartments">Апартаменты</label>
-            </li>
-          </ul>
-        </fieldset>
+              <li class="filter__item">
+                <input class="filter__radio" type="radio" name="type-of-housing" value="apartments"
+                  id="filter-radio-apartments">
+                <label class="filter__label" for="filter-radio-apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <fieldset class="filter__field">
-          <legend class="filter__legend">Стоимость, ₽:</legend>
+          <fieldset class="filter__field">
+            <legend class="filter__legend">Стоимость, ₽:</legend>
 
-          <p class="filter__price-block">
-            <label class="filter__input"><input type="text" value="0" placeholder="0"> от</label>
-            <label class="filter__input"><input type="text" value="9000" placeholder="9000"> до</label>
-          </p>
-        </fieldset>
+            <p class="filter__price-block">
+              <label class="filter__input"><input type="number" value="0" placeholder="0" name="filter-price-min">
+                от</label>
+              <label class="filter__input"><input type="number" value="9000" placeholder="9000" name="filter-price-max">
+                до</label>
+            </p>
+          </fieldset>
 
-        <button class="filter__button-accept button button--blue" type="submit">Применить</button>
-        <button class="filter__button-reset button" type="reset">Сбросить</button>
-      </form>
+          <button class="filter__button-accept button button--blue" type="submit">Применить</button>
+          <button class="filter__button-reset button" type="reset">Сбросить</button>
+        </form>
+      </section>
+
 
       <!-- Список гостиниц -->
       <section class="catalog" data-test="catalog">
-        <h2 class="visually-hidden">Список гостиниц</h2>
+        <header class="catalog__header">
+          <h2 class="visually-hidden">Список гостиниц</h2>
 
-        <p class="catalog__title title">Найдено гостиниц: 38</p>
+          <p class="catalog__title title">Найдено гостиниц: 38</p>
 
-        <label class="catalog__sort-wrap">
-          <span class="visually-hidden">Сортировка</span>
-          <select class="catalog__sort" name="sort" id="catalog-sort">
-            <option value="sort-cheapest">Сначала дешевые</option>
-            <option value="sort-expensive">Сначала дорогие</option>
-            <option value="sort-popular">По популярности</option>
-          </select>
-        </label>
+          <label class="catalog__sort-wrap">
+            <span class="visually-hidden">Сортировка</span>
+            <select class="catalog__sort" name="sort" id="catalog-sort">
+              <option value="sort-cheapest">Сначала дешевые</option>
+              <option value="sort-expensive">Сначала дорогие</option>
+              <option value="sort-popular">По популярности</option>
+            </select>
+          </label>
 
-        <ul class="catalog__display-list">
-          <li class="catalog__display-item">
-            <a class="catalog__display-button" href="#">
-              <span class="visually-hidden">Показать карточками</span>
-            </a>
-          </li>
-          <li class="catalog__display-item">
-            <a class="catalog__display-button" href="#">
-              <span class="visually-hidden">Показать крупно</span>
-            </a>
-          </li>
-          <li class="catalog__display-item">
-            <a class="catalog__display-button" href="#">
-              <span class="visually-hidden">Показать списком</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="catalog__display-list">
+            <li class="catalog__display-item">
+              <a class="catalog__display-button catalog__display-button--current">
+                <span class="visually-hidden">Показать карточками</span>
+              </a>
+            </li>
+            <li class="catalog__display-item">
+              <a class="catalog__display-button" href="#">
+                <span class="visually-hidden">Показать крупно</span>
+              </a>
+            </li>
+            <li class="catalog__display-item">
+              <a class="catalog__display-button" href="#">
+                <span class="visually-hidden">Показать списком</span>
+              </a>
+            </li>
+          </ul>
+        </header>
 
         <ul class="catalog__list">
+          <!-- Карточка -->
           <li class="catalog__item card">
             <a class="card__link" href="#">
               <img class="card__img" src="#" alt="">
@@ -175,9 +186,13 @@
             <a class="card__button button button--brown" href="#">Подробнее</a>
             <button class="card__button button button--blue" type="button">В избранное</button>
 
-            <img class="card__stars" src="#" alt="4 звезды">
+            <p class="card__stars">
+              <span class="visually-hidden">4 звезды</span>
+            </p>
             <p class="card__rating">Рейтинг: 8,5</p>
           </li>
+
+          <!-- Карточка -->
           <li class="catalog__item card">
             <a class="card__link" href="#">
               <img class="card__img" src="#" alt="">
@@ -190,11 +205,15 @@
             </p>
 
             <a class="card__button button button--brown" href="#">Подробнее</a>
-            <button class="card__button button button--blue" type="button">В избранное</button>
+            <button class="card__button card__button--active button button--blue" type="button">В избранном</button>
 
-            <img class="card__stars" src="#" alt="4 звезды">
+            <p class="card__stars">
+              <span class="visually-hidden">4 звезды</span>
+            </p>
             <p class="card__rating">Рейтинг: 9,2</p>
           </li>
+
+          <!-- Карточка -->
           <li class="catalog__item card">
             <a class="card__link" href="#">
               <img class="card__img" src="#" alt="">
@@ -209,9 +228,13 @@
             <a class="card__button button button--brown" href="#">Подробнее</a>
             <button class="card__button button button--blue" type="button">В избранное</button>
 
-            <img class="card__stars" src="#" alt="3 звезды">
+            <p class="card__stars">
+              <span class="visually-hidden">3 звезды</span>
+            </p>
             <p class="card__rating">Рейтинг: 6,9</p>
           </li>
+
+          <!-- Карточка -->
           <li class="catalog__item card">
             <a class="card__link" href="#">
               <img class="card__img" src="#" alt="">
@@ -226,31 +249,35 @@
             <a class="card__button button button--brown" href="#">Подробнее</a>
             <button class="card__button button button--blue" type="button">В избранное</button>
 
-            <img class="card__stars" src="#" alt="2 звезды">
+            <p class="card__stars">
+              <span class="visually-hidden">2 звезды</span>
+            </p>
             <p class="card__rating">Рейтинг: 5,0</p>
           </li>
         </ul>
 
-        <ul class="catalog__paginator catalog__paginator">
-          <li class="paginator__item">
-            <a class="paginator__link paginator__link--disabled" href="#">1</a>
-          </li>
-          <li class="paginator__item">
-            <a class="paginator__link" href="#">2</a>
-          </li>
-          <li class="paginator__item">
-            <a class="paginator__link" href="#">3</a>
-          </li>
-          <li class="paginator__item">
-            <a class="paginator__link" href="#">4</a>
-          </li>
-          <li class="paginator__item paginator__item--dots">
-            ...
-          </li>
-          <li class="paginator__item">
-            <a class="paginator__link" href="#">10</a>
-          </li>
-        </ul>
+        <footer class="catalog__footer">
+          <ul class="catalog__paginator">
+            <li class="paginator__item">
+              <a class="paginator__link paginator__link--disabled" href="#">1</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">2</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">3</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">4</a>
+            </li>
+            <li class="paginator__item paginator__item--dots">
+              ...
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">10</a>
+            </li>
+          </ul>
+        </footer>
       </section>
 
       <!-- Подписка -->
@@ -270,17 +297,18 @@
     <footer class="page-footer" data-test="footer">
       <ul class="footer__soc-list">
         <li class="footer__soc-item">
-          <a class="footer__soc-link" href="https://vk.com/htmlacademy" target="_blank">
+          <a class="footer__soc-link" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Vkontakte</span>
           </a>
         </li>
         <li class="footer__soc-item">
-          <a class="footer__soc-link" href="https://t.me/htmlacademy" target="_blank">
+          <a class="footer__soc-link" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Telegram</span>
           </a>
         </li>
         <li class="footer__soc-item">
-          <a class="footer__soc-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+          <a class="footer__soc-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
+            rel="noreferrer noopener">
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
@@ -288,7 +316,7 @@
 
       <a class="footer__tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
-      <a class="footer__copy" href="https://htmlacademy.ru/" target="_blank">
+      <a class="footer__copy" href="https://htmlacademy.ru/" target="_blank" rel="noreferrer noopener">
         <img src="#" alt="Логотип сайта разработчика  - Htmlacademy">
       </a>
 
